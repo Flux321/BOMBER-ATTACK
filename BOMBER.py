@@ -1,5 +1,5 @@
 import os, sys, time, requests, random
-print('Установка программы... Пожалуйста подождите..')
+print('Запуск программы... Пожалуйста подождите..')
 time.sleep(5)
 os.system('python -m pip install pip')
 os.system('pip install requests')
